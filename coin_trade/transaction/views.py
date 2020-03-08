@@ -9,7 +9,7 @@ import requests
 import json
 import sys
 sys.path.append('../')
-from coin_trade.api import *
+# from coin_trade.api import *
 
 # Create your views here.
 
