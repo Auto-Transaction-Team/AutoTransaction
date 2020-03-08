@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-const TICKERURL = 'http://localhost:8080/ticker/';
+const TICKERURL = 'http://localhost:8000/ticker/';
 
 class Ticker extends Component {
   constructor(props) {

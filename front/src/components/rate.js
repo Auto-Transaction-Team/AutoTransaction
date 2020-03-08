@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-const RATEURL = 'http://localhost:8080/rate/';
+const RATEURL = 'http://localhost:8000/rate/';
 
 class Rate extends Component {
   constructor(props) {
