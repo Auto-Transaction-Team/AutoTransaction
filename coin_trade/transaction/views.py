@@ -21,8 +21,6 @@ def index(request):
 
     result = requests.get(base_url + endpoint+pair, timeout=5).text
 
-    print(result)
-
     # path_balance = '/api/accounts/balance'
     # result = coincheck.get(path_balance)
     # print(result)

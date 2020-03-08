@@ -22,7 +22,6 @@ class Transaction extends Component {
           axios
             .get(RATEURL)
             .then((result) => {
-              console.log(result)
               this.setState({getList: result.data})
             })
           } catch (error) {
