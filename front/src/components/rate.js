@@ -22,6 +22,7 @@ class Rate extends Component {
           axios
             .get(RATEURL)
             .then((result) => {
+              print(result)
               this.setState({getList: result.data})
             })
           } catch (error) {
