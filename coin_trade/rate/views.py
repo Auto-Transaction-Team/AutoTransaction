@@ -10,7 +10,7 @@ import json
 import os
 import slack
 import time
-# Create your views here.
+from coin_trade.config import getSlackToken
 
 def index(request):
     coins = {'BTC': 'btc_jpy', 'ETH': 'eth_jpy', 'ETC': 'etc_jpy', 'LSK': 'lsk_jpy', 'FCT': 'fct_jpy', 'XRP': 'xrp_jpy',
@@ -18,10 +18,13 @@ def index(request):
 
     URL = 'https://coincheck.com/api/rate/'
 
+    # Slackのトークン取得
+    SLACK_TOKEN = getSlackToken()
+
     # Slack 通知の処理
     url = "https://slack.com/api/chat.postMessage"
     data = {
-    "token": "xoxb-987250221396-1012588986674-535g1TLN2MvO4h9xvMR1qSKg",
+    "token": SLACK_TOKEN,
     "channel": "CV17C6MC4",
     "text": '計測開始'
     }
@@ -45,7 +48,7 @@ def index(request):
         # Slack 通知の処理
         url = "https://slack.com/api/chat.postMessage"
         data = {
-        "token": "xoxb-987250221396-1012588986674-535g1TLN2MvO4h9xvMR1qSKg",
+        "token": SLACK_TOKEN,
         "channel": "CV17C6MC4",
         "text": text
         }
@@ -63,7 +66,7 @@ def index(request):
     # Slack 通知の処理
     url = "https://slack.com/api/chat.postMessage"
     data = {
-    "token": "xoxb-987250221396-1012588986674-535g1TLN2MvO4h9xvMR1qSKg",
+    "token": SLACK_TOKEN,
     "channel": "CV17C6MC4",
     "text": '計測終了'
     }
