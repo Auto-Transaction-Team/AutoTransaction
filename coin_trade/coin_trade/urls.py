@@ -21,4 +21,5 @@ urlpatterns = [
     path('ticker/', include('ticker.urls')),
     path('rate/', include('rate.urls')),
     path('transaction/', include('transaction.urls')),
+    path('trade/', include('trade.urls')),
 ]
